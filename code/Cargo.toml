@@ -2,11 +2,11 @@
 name = "rail"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.80"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-godot = { git = "https://github.com/godot-rust/gdext", rev = "8d934203edccf0bde0c3a6c0971f5f77900bd169" }
-petgraph = "0.6.4"
+godot = { git = "https://github.com/godot-rust/gdext", rev = "8ad9cb0ea877ccf7d4f34b17d87f0a1eb7c47f56" }
+petgraph = "0.6.5"

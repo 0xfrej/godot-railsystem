@@ -1,9 +1,9 @@
-use crate::scene::rail_2d::rail::Rail2D;
+use crate::node::rail_2d::rail::Rail2D;
 use godot::prelude::*;
 
 #[derive(GodotClass)]
 #[class(tool, base=Node2D)]
-pub struct Turnout2D {
+pub struct RailTurnout2D {
     #[base]
     base: Base<Node2D>,
 
@@ -17,7 +17,7 @@ pub struct Turnout2D {
 }
 
 #[godot_api]
-impl Turnout2D {
+impl RailTurnout2D {
     #[func]
     fn set_points(&mut self, points: Array<Gd<Rail2D>>) {
         self.points = points;
@@ -51,7 +51,7 @@ impl Turnout2D {
 }
 
 #[godot_api]
-impl INode2D for Turnout2D {
+impl INode2D for RailTurnout2D {
     fn init(base: Base<Self::Base>) -> Self {
         Self {
             base,

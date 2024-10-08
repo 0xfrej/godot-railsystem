@@ -1,11 +1,12 @@
-use crate::scene::rail_2d::rail::Rail2D;
-use godot::engine::node::InternalMode;
-use godot::engine::{Curve2D, Engine, Timer};
-use godot::prelude::*;
+use crate::node::rail_2d::rail::Rail2D;
+use godot::{
+    classes::{node::InternalMode, Curve2D, Engine, Timer},
+    prelude::*,
+};
 
 #[derive(GodotClass)]
 #[class(tool, base=Node2D)]
-pub struct RailFollower2D {
+pub struct RailBogie2D {
     #[base]
     base: Base<Node2D>,
 
@@ -44,7 +45,7 @@ pub struct RailFollower2D {
 }
 
 #[godot_api]
-impl RailFollower2D {
+impl RailBogie2D {
     // fn path_changed(&mut self) {
     //todo: implement this -> has to be called when path changes within currently occupied rail
     /*
@@ -232,7 +233,7 @@ impl RailFollower2D {
 }
 
 #[godot_api]
-impl INode2D for RailFollower2D {
+impl INode2D for RailBogie2D {
     fn init(base: Base<Self::Base>) -> Self {
         Self {
             base,

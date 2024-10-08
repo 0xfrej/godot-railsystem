@@ -1,6 +1,6 @@
 use godot::prelude::*;
 
-mod scene;
+mod node;
 
 struct RailSystem;
 
